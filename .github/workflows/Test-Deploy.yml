@@ -1,0 +1,17 @@
+name: test and lint
+on: push
+jobs:
+    Build:
+        runs-on: ubuntu-latest # NodeJS included
+        steps:
+            - name: Checkout code  # Hämta hela repot
+              uses: actions/checkout@v4 
+
+            - name: Install dependencies 
+              run: npm ci
+
+            - name: run test
+              run: npm test
+
+            - name: deploy  # Simulating deployment
+              run: echo 'Deploying...'
