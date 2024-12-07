@@ -1,3 +1,8 @@
+# TODO:
+# Download the project code
+# install dependencies
+# run lint test and build scripts and output deploying project...
+
 name: test and lint
 on: [push, workflow_dispatch]
 jobs:
@@ -23,8 +28,3 @@ jobs:
 
             - name: Simulate deploy 
               run: echo 'Deploying project..'
-
-# Tests and lints and simulates deploy at push
-# Download the project code
-# install dependencies
-# run lint test and build scripts and output deploying project...
