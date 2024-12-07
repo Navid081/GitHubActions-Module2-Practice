@@ -7,11 +7,24 @@ jobs:
             - name: Checkout code  # Hämta hela repot
               uses: actions/checkout@v4 
 
+            - name: Install NodeJS # Even tough included, just for the sake of it
+              uses: actions/setup-node@v3
+              with:
+                node-version: '18'
+              
             - name: Install dependencies 
               run: npm ci
+            
+            - name: Run lint
+              run: npm run lint
 
-            - name: run test
+            - name: Run test
               run: npm test
 
-            - name: deploy  # Simulating deployment
-              run: echo 'Deploying...'
+            - name: Simulate deploy 
+              run: echo 'Deploying project..'
+
+# Tests and lints and simulates deploy at push
+# Download the project code
+# install dependencies
+# run lint test and build scripts and output deploying project...
